@@ -59,12 +59,38 @@ for i in list1:
 for i in koszyk.items():
     print(i)                #ZADANIE 5
 
-set1 = set()
-for i in range(0, 5):
-    set1.add(input("Podaj wartość: "))
-s = set1
-print(set1)
-print("Posortowany zbiór:", sorted(s))          #ZADANIE 6
+# set1 = set()
+# for i in range(0, 5):
+#     set1.add(input("Podaj wartość: "))
+# s = set1
+# print(set1)
+# print("Posortowany zbiór:", sorted(s))          #ZADANIE 6 (poprzednia wersja)
+
+def setowanie():
+    set1 = set()
+    g = False
+
+    for i in range(0, 5):
+        wejscie = input("Podaj liczbę zmiennoprzecinkową: ")
+        for z in wejscie:
+            if z in "1234567890.-":
+                continue
+            elif z not in "1234567890.-":
+                g = True
+                print("Podana wartość nie jest liczbą")
+                del wejscie
+                break
+        if g:
+            break
+        elif not g:
+            set1.add(float(wejscie))
+    if len(set1) == 5:
+        s = set1
+        print(set1)
+        print("Posortowany zbiór:", sorted(s))
+    else:
+        setowanie()
+setowanie()                                     #ZADANIE 6 (ulepszone)
 
 
 
