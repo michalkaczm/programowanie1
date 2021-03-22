@@ -43,7 +43,10 @@ if x in li:
 else:
     print("Podane zwierzę nie znajduje się na liście") #ZADANIE 3
 
-list1 = [-3, 0, 2]
+import numpy as np
+from numpy import random
+list1 = np.random.randint(-100, 100, 10)
+list(list1)
 for i in list1:
     if i < 0:
         print(i, "jest mniejsze od 0")
