@@ -63,3 +63,44 @@ set1 = set()
 for i in range(0, 5):
     set1.add(input("Podaj wartość: "))
 print(set1)                 #ZADANIE 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x1 = [1]
+for x in x1:
+    x = x1[0]
+    x1.append(x)
+    print(x1)
+
+#a tutaj zastanawialismy się czy da się przeładować komputer przy użyciu for w pythonie 
