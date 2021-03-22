@@ -62,7 +62,9 @@ for i in koszyk.items():
 set1 = set()
 for i in range(0, 5):
     set1.add(input("Podaj wartość: "))
-print(set1)                 #ZADANIE 6
+s = set1
+print(set1)
+print("Posortowany zbiór:", sorted(s))          #ZADANIE 6
 
 
 
