@@ -67,30 +67,17 @@ for i in koszyk.items():
 # print("Posortowany zbiór:", sorted(s))          #ZADANIE 6 (poprzednia wersja)
 
 def setowanie():
-    set1 = set()
-    g = False
+    s = list()
+    while len(s) < 5:
+        try:
+            s.append(float(input("Podaj liczbę zmiennoprzecinkową: ")))
+        except ValueError as e:
+                print("Podana wartość nie jest liczbą!")
+    set1 = set(s)
+    print(f"Wprowadzony set: {set1} \nWprowadzona lista: {s} \nPosortowany set: {sorted(set1)} \nPosortowana lista: {sorted(s)}")
+setowanie()
 
-    for i in range(0, 5):
-        wejscie = input("Podaj liczbę zmiennoprzecinkową: ")
-        for z in wejscie:
-            if z in "1234567890.-":
-                continue
-            elif z not in "1234567890.-":
-                g = True
-                print("Podana wartość nie jest liczbą")
-                del wejscie
-                break
-        if g:
-            break
-        elif not g:
-            set1.add(float(wejscie))
-    if len(set1) == 5:
-        s = set1
-        print(set1)
-        print("Posortowany zbiór:", sorted(s))
-    else:
-        setowanie()
-setowanie()                                     #ZADANIE 6 (ulepszone)
+#ZADANIE 6 (ulepszone)
 
 
 
